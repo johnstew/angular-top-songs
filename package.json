@@ -4,7 +4,7 @@
   "description": "Instructions on creating a simple Angular Application ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config ./webpack.dev.config.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,15 @@
   },
   "homepage": "https://github.com/AMCSVOD/angular-top-songs#readme",
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "angular-spotify": "^1.4.1",
+    "html-webpack-plugin": "^2.24.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-es2016": "^6.16.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
