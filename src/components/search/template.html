@@ -1,2 +1,2 @@
 <h1>Search</h1>
-<input type="text" id="search" ng-model="$ctrl.input">
+<input type="text" ng-model="$ctrl.input" placeholder="{{$ctrl.placeholder}}" ng-keyup="$ctrl.handleKeyUp($event)" />

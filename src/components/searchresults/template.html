@@ -1,0 +1,7 @@
+<h1 ng-if="$ctrl.results === false">No Results!</h1>
+<h1 ng-if="$ctrl.results">Results</h1>
+<ul>
+  <li ng-repeat="track in $ctrl.results.tracks.items">
+    {{ track.name }}
+  </li>
+</ul>
