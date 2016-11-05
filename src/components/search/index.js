@@ -6,10 +6,10 @@ module.exports = function(mainModule) {
       input: '<'
     },
     template: require('./template.html'),
-    controller: SearchController
+    controller: SearchCtrl
   });
 
-  function SearchController(Spotify, search) {
+  function SearchCtrl(Spotify, search) {
     const ctrl = this;
 
     ctrl.handleKeyUp = function(e) {

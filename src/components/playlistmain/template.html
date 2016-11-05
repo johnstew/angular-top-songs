@@ -1,0 +1,15 @@
+<div>
+  <button ng-click="$ctrl.handleCreateButton()">Create Playlist</button>
+  <div>
+    <input ng-model="$ctrl.playlistName" ng-if="$ctrl.showPlaylistForm" ng-keyup="$ctrl.createPlaylist($event)" type="text" placeholder="Super Awesome Playlist">
+  </div>
+  <h1>Playlists</h1>
+  <ul>
+    <li ng-repeat="playlist in $ctrl.playlists">
+      <span>{{ playlist.name }}</span>
+      <ul>
+        <li ng-repeat="track in playlist.tracks">{{ track.name }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

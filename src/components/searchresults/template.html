@@ -1,7 +1,15 @@
-<h1 ng-if="$ctrl.results === false">No Results!</h1>
 <h1 ng-if="$ctrl.results">Results</h1>
 <ul>
-  <li ng-repeat="track in $ctrl.results.tracks.items">
-    {{ track.name }}
+  <li style="position: relative;" ng-repeat="track in $ctrl.results.tracks.items">
+    <span>{{ track.name }}</span> <button ng-click="$ctrl.handleShowPlaylists(track)">Add</button>
+    <div ng-if="track.showPlaylists">
+      <ul>
+        <li ng-repeat="playlist in $ctrl.playlists">
+          <label>{{ playlist.name }}</label>
+          <input type="checkbox" ng-model="playlists" ng-change="$ctrl.handlePlaylistChecked(playlist)">
+        </li>
+      </ul>
+      <button ng-click="$ctrl.handleAddTrack(track)">Submit</button>
+    </div>
   </li>
 </ul>
